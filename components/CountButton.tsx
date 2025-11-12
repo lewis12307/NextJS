@@ -19,15 +19,11 @@ export default function Counter(props) {
           <div>
                <p>Count: {count}</p>
                <button onClick={handleClick}
-                    className="counter-btn"
                     style={{
-                         backgroundColor: props.color || "black",   // use prop color, fallback to gray
-                         fontSize: "16px",
-                         color: "white",
-                         border: "none",
-                         borderRadius: "8px",
-                         padding: "10px 16px",
-                    }}>
+                         backgroundColor: props.color || "black" 
+                         
+                    }}
+                    className="count-button">
                     +{props.incrementBy ? props.incrementBy : 1}
                </button>
           </div>
