@@ -9,15 +9,17 @@ import ProductCard from './Product';
 export default function Search(props) {
      const [searchValue, setSearchValue] = useState("");
 
+     function handleInputChange(event) {
+          setSearchValue(event.target.value)
+     }
+
+
+
+     
      const filteredProducts = props.products
           .filter((product) => (product.title.toLowerCase().includes(searchValue.toLowerCase()))
      );
 
-
-
-     function handleInputChange(event) {
-          setSearchValue(event.target.value)
-     }
 
      return (
           <div>
